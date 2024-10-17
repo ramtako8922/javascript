@@ -6,11 +6,11 @@
     <title>Parctica JaavaScript</title>
 </head>
 <body>
-   <p>Probando JaavaScript con {{nombre2}}</p> 
+   <p>Probando JaavaScript con </p> 
    <script>
     //estas son variables declaradas en el lenguaje JavaScript
     //var nombre="Ricardo";
-    var numero=54;
+ 
     var numero2=34.50;
     var decision=true;
    
@@ -45,7 +45,7 @@
 
     palabra="hola";
 
-    alert(palabra);
+   // alert(palabra);
 
     var x;
      console.log(x)
@@ -79,6 +79,115 @@
     //console.log(nombre);
 
     console.log(pi);
+
+    let apellido="Mejía";
+
+    let numero=34;
+    let decimal=23.34;
+    let verdadero=true;
+    
+    var animal;
+    console.log(typeof(numero));
+    console.log(typeof(decimal));
+    console.log(typeof(verdadero))
+    console.log(typeof(apellido));
+    console.log(typeof(animal));
+
+    //Definición de Objeto el cual es una estructura de datos
+     var persona={
+        nombre: "Pablo",
+        edad:34,
+        profesión: "Doctor",
+        estatura: 1.50,
+        direccion:{
+            casa: 12,
+            barrio:"morichal"
+
+        }
+
+
+     };
+
+
+     //Acceso a propiedades
+     console.log(persona.edad);
+     console.log(persona.estatura);
+     console.log(persona.profesión);
+
+     console.log(persona.direccion.casa);
+
+     console.log(persona["direccion"].casa)
+
+     // la variable persona 2 tienes los mismos datos de la variable persona porque apunta a la misma referencia en memoria
+     let persona2=persona;
+      //Persona 2
+      console.log("persona 2");
+     console.log(persona2);
+
+     persona2.nombre="Juan";
+     //Persona 1
+     console.log("persona 1");
+     console.log(persona);
+    
+     //Arreglos
+     miArray=[1,2,3,4,6,7];
+     console.log(miArray);
+     console.log(miArray.length)
+
+     miArray.push(7);
+
+     console.log(miArray);
+     miArray.pop()
+     console.log(miArray);
+     //Operaciones con fechas
+     let fechaActual=new Date();
+     console.log(fechaActual);
+     console.log(fechaActual.getFullYear());
+     console.log(fechaActual.getDate());
+     console.log(fechaActual.getMonth());
+
+     //Expresiones regulares
+
+     let expresion=/hello/i;
+
+     let saludo="hello Ricardo";
+     console.log(expresion.test(saludo));
+     console.log(expresion.exec(saludo));
+
+     //otra forma de definir expresiones regulares
+
+     let re = new RegExp("ab*c");
+
+     let propiedad="el abaco es muy bonito";
+     console.log(re.test(propiedad));
+     console.log(re.exec(propiedad));
+
+     //Operaciones matemáticas con Math
+
+     let cantidad=64;
+
+     let cantidad2=4.5;
+
+     console.log(Math.sqrt(64));
+
+     console.log(Math.floor(cantidad2));
+
+     let numeroRandom= Math.random(1,5);
+     console.log(numeroRandom);
+
+     function getRandom(min,max){
+       let nRandom=Math.round(Math.random()*(max-min)+min) ;
+
+        console.log(nRandom);
+     }
+
+     getRandom(10,150);
+
+
+
+
+
+
 
    </script>
 </body>
