@@ -7,6 +7,8 @@
 </head>
 <body>
    <p>Probando JaavaScript con Talento Tech </p> 
+   <span>elemento DOM</span>
+<h2>objeto del DOM</h2>
    <script>
     //estas son variables declaradas en el lenguaje JavaScript
     //var nombre="Ricardo";
@@ -94,41 +96,12 @@
     console.log(typeof(animal));
 
     //Definición de Objeto el cual es una estructura de datos
-     var persona={
-        nombre: "Pablo",
-        edad:34,
-        profesión: "Doctor",
-        estatura: 1.50,
-        direccion:{
-            casa: 12,
-            barrio:"morichal"
-
-        }
-
-
-     };
-
-
-     //Acceso a propiedades
-     console.log(persona.edad);
-     console.log(persona.estatura);
-     console.log(persona.profesión);
-
-     console.log(persona.direccion.casa);
-
-     console.log(persona["direccion"].casa)
-
-     // la variable persona 2 tienes los mismos datos de la variable persona porque apunta a la misma referencia en memoria
-     let persona2=persona;
-      //Persona 2
-      console.log("persona 2");
-     console.log(persona2);
-
-     persona2.nombre="Juan";
-     //Persona 1
-     console.log("persona 1");
-     console.log(persona);
     
+
+     
+     
+
+     
      //Arreglos
      miArray=[1,2,3,4,6,7];
      console.log(miArray);
@@ -182,6 +155,117 @@
      }
 
      getRandom(10,150);
+
+
+     var persona={
+        nombre: "Pablo",
+        edad:34,
+        profesión: "Doctor",
+        estatura: 1.50,
+        direccion:{
+            casa: 12,
+            barrio:"morichal"
+
+        }
+
+
+     };
+
+     //Acceso a propiedades
+     console.log(persona.edad);
+     console.log(persona.estatura);
+     console.log(persona.profesión);
+
+     console.log(persona.direccion.casa);
+
+     console.log(persona["direccion"].casa)
+
+     // la variable persona 2 tienes los mismos datos de la variable persona porque apunta a la misma referencia en memoria
+     let persona2=persona;
+      //Persona 2
+      console.log("persona 2");
+     console.log(persona2);
+
+     persona2.nombre="Juan";
+     //Persona 1
+     console.log("persona 1");
+     console.log(persona);
+    
+
+
+     let personaJson=JSON.stringify(persona);
+     console.log(personaJson);
+
+     let personaObjeto=JSON.parse(personaJson);
+
+     console.log(personaObjeto);
+    
+     //uso de estructura de datos map
+
+
+     let mapa= new Map();
+
+     mapa.set("ciudad","Madrid");
+     mapa.set("Coordenada",23.45)
+     mapa.set("capital","Bogotá");
+
+     mapa.get("ciudad");
+
+     console.log(mapa);
+
+     console.log(mapa.get("ciudad"));
+     console.log(mapa.size);
+
+     let promesa=new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+        const datos = {
+        nombre: 'ricardo',
+        edad: 35
+            };
+            //si todo sale bien
+            resolve("Operación exitosa");
+
+        },2000)
+        
+     })
+
+     promesa.then((datos)=>{
+        console.log(datos);
+     })
+
+     let numero3=123456.6789
+     console.log(new Intl.NumberFormat("es-ES").format(numero3));
+     console.log(new Intl.NumberFormat("es-ES").format(new Date()));
+
+     //Funcioness escristas de la forma tracional
+      
+    function operaciones(num1, num2) {
+        let resultado=num1+num2;
+        let resultado2=num1-num2;
+        let resultado3=num1*num2;
+        let resultado4=num1/num2;
+       
+        return resultado4;
+        
+    }
+
+    console.log("esta es la función "+operaciones(5,2));
+
+    //fuciones tipo flecha
+
+    const operaciones2=(num1, num2)=>{
+        let resultado4=num1/num2;
+
+        return resultado4;
+
+    }
+
+    console.log("esta es la función tipo flecha "+operaciones2(5,2));
+
+
+
+   
+
 
 
 
