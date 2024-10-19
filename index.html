@@ -262,6 +262,194 @@
 
     console.log("esta es la función tipo flecha "+operaciones2(5,2));
 
+    //uso de condicionales
+
+    const compararValores=()=>{
+        num1=2;
+        num2=6;
+
+        if (num2>num1) {
+
+           
+
+            console.log(num1+ "es mayor que "+num2);
+            
+        }else{
+
+
+            console.log(num2+ "es menor que "+num1);
+        }
+
+
+    }
+
+    compararValores();
+
+    compararValores();
+
+
+
+    const compararEdades=(edad)=>{
+        if(edad<=5){
+        console.log("Eres un niño")
+        
+
+    }else if(edad>5 && edad<=15 ){
+        console.log("Eres un adolescente")
+
+    } else if(edad>15 && edad<=28 ){
+        
+        console.log("Eres  adulto joven");
+   
+
+    }
+    else if(edad>28 && edad<=55){
+
+        console.log("Eres  adulto ");
+    }
+
+    else{
+        
+
+        console.log("Eres un anciano");
+    }
+    }
+
+    compararEdades(60);
+
+    const validarIndependencia=(edad,casa)=>{
+
+        if(edad>=18){
+            if(casa==true){
+
+                console.log("ya eres independiente");
+            }
+        }
+        
+    }
+
+    validarIndependencia(20,true)
+
+    const validarIMC=(peso, altura)=>{
+        altura=1.40
+        peso=78;
+
+        if(altura>=1.50 || peso>=30){
+            console.log(" estas gordito");
+        }
+
+    }
+
+    validarIMC();
+
+    /*
+    operadores de comparación
+    > mayor que
+    < menor que
+    >= mayor o igual
+    <= menor o igual
+    = igual que
+    
+    == es igual que
+    != es diferente de
+
+    Operadores lógicos
+
+    && operador y
+    || operador o
+
+    */
+
+    //switch
+
+    let color="azul"
+
+    switch (color) {
+        case "verde":
+            console.log("estas pintando de verde");
+            
+            break;
+        case "rojo":
+
+        console.log("estas pintando de roja");
+        break;
+
+        case "morado":
+        console.log("estas pintando de roja");
+        break;
+
+        default:
+        console.log("no tengo ese color para pintar");
+            break;
+    }
+
+    /* let nombre=prompt("ingrese su nombre");
+    alert( "TE LLAMAS "+ nombre);
+ */
+
+
+
+    /* const calucladora=(val1,val2)=>{
+    let opcion=prompt("ingre la opereción a relizar")
+      
+    switch (opcion) {
+        case "suma":
+             alert(val1+val2); 
+            
+            break;
+        case "resta":
+
+      alert( val1-val2);
+        break;
+
+        case "multiplicación":
+        alert( val1*val2);
+        break;
+
+        case "división":
+        alert( val1/val2); 
+        break;
+
+
+        default:
+            alert("no tengo esa operación")
+            break;
+      }
+
+    }
+
+    calucladora(34,56);
+
+    //bucles
+    
+    //For
+
+    array=[1,2,3,4,5,6]
+
+    for (let i = 0; i <= array.length; i++) {
+        const element = array[i];
+
+        alert(element)
+
+
+        
+    } */
+
+    function contarNumeros(numLimite) {
+        let resultado=0;
+        for (let index = 0; index < numLimite; index++) {
+            index;
+            alert(index)
+            
+        }
+        
+        
+    }
+
+ contarNumeros(23);
+
+
+
 
 
    
