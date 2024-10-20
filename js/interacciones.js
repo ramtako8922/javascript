@@ -42,12 +42,7 @@ bonton5.addEventListener('click',()=>{
     parrafo.remove();
 })
 
-boton6.addEventListener('click',()=>{
-    console.log(input);
-    texto.innerHTML=
-    
 
-})
 
 document.getElementById("boton6").addEventListener("click", function() {
     // Capturar el valor del input
