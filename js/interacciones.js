@@ -44,8 +44,7 @@ bonton5.addEventListener('click',()=>{
 
 boton6.addEventListener('click',()=>{
     console.log(input);
-    texto.innerHTML=input
-
+    texto.innerHTML=
     
 
 })
@@ -57,7 +56,8 @@ document.getElementById("boton6").addEventListener("click", function() {
     // Mostrar el valor en la consola
     console.log(valor);
 
-    texto.innerHTML=valor;
+    texto.innerHTML=" esto me llega desde el input "+ valor
+;
 
 })
 
