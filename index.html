@@ -15,6 +15,9 @@
  
     var numero2=34.50;
     var decision=true;
+
+    numero2=56.70
+    alert("El valor de la variable es " +numero2);
    
     // Comentario en linea
    // alert(" hola"+ nombre + "tienes"+ numero+ "años de edad y pesas "+ numero2+ "¿es esto " + decision)
@@ -70,11 +73,19 @@
 
             console.log("no, ella se llama "+nombre)
 
+            //No se puede cambiar el valor
+
             console.log(pi);
 
             
         }
     }
+
+
+
+
+
+
 
     mostrarnombre();
 
@@ -107,11 +118,15 @@
      console.log(miArray);
      console.log(miArray.length)
 
-     miArray.push(7);
+     miArray.push(8);
+     miArray.push(10);
 
      console.log(miArray);
      miArray.pop()
      console.log(miArray);
+
+     miArray2=[1,"fabio",true,false];
+     console.log(miArray2);
      //Operaciones con fechas
      let fechaActual=new Date();
      console.log(fechaActual);
@@ -129,10 +144,10 @@
 
      //otra forma de definir expresiones regulares
 
-     let re = new RegExp("ab*c");
 
+     let re = new RegExp("ab*c");
      let propiedad="el abaco es muy bonito";
-     console.log(re.test(propiedad));
+     console.log(re.test(propiedad)); //true
      console.log(re.exec(propiedad));
 
      //Operaciones matemáticas con Math
@@ -141,11 +156,11 @@
 
      let cantidad2=4.5;
 
-     console.log(Math.sqrt(64));
+     console.log(Math.sqrt(cantidad));
 
      console.log(Math.floor(cantidad2));
 
-     let numeroRandom= Math.random(1,5);
+     let numeroRandom= Math.random();
      console.log(numeroRandom);
 
      function getRandom(min,max){
@@ -172,6 +187,7 @@
      };
 
      //Acceso a propiedades
+     console.log(persona)
      console.log(persona.edad);
      console.log(persona.estatura);
      console.log(persona.profesión);
@@ -181,7 +197,7 @@
      console.log(persona["direccion"].casa)
 
      // la variable persona 2 tienes los mismos datos de la variable persona porque apunta a la misma referencia en memoria
-     let persona2=persona;
+     let persona2=persona; //Apunta al mismo espacio en memoria de la variable persona
       //Persona 2
       console.log("persona 2");
      console.log(persona2);
@@ -223,9 +239,9 @@
         edad: 35
             };
             //si todo sale bien
-            resolve("Operación exitosa");
+            resolve("Operación exitosa" ,datos);
 
-        },2000)
+        },5000)
         
      })
 
@@ -245,7 +261,7 @@
         let resultado3=num1*num2;
         let resultado4=num1/num2;
        
-        return resultado4;
+        return resultado;
         
     }
 
@@ -262,11 +278,13 @@
 
     console.log("esta es la función tipo flecha "+operaciones2(5,2));
 
+    //Estructuras de Control
+   
     //uso de condicionales
 
     const compararValores=()=>{
-        num1=2;
-        num2=6;
+        num1=8;
+        num2=3;
 
         if (num2>num1) {
 
@@ -285,7 +303,7 @@
 
     compararValores();
 
-    compararValores();
+    
 
 
 
@@ -331,8 +349,8 @@
     validarIndependencia(20,true)
 
     const validarIMC=(peso, altura)=>{
-        altura=1.40
-        peso=78;
+        altura=1.70
+        peso=12;
 
         if(altura>=1.50 || peso>=30){
             console.log(" estas gordito");
@@ -362,7 +380,7 @@
 
     //switch
 
-    let color="azul"
+    let color="rojo"
 
     switch (color) {
         case "verde":
@@ -371,7 +389,7 @@
             break;
         case "rojo":
 
-        console.log("estas pintando de roja");
+        console.log("estas pintando de rojo");
         break;
 
         case "morado":
@@ -383,13 +401,13 @@
             break;
     }
 
-    /* let nombre=prompt("ingrese su nombre");
-    alert( "TE LLAMAS "+ nombre);
- */
+    /*  let nombre6=prompt("ingrese su nombre");
+    alert( "TE LLAMAS "+ nombre6);
+  */
 
 
 
-    /* const calucladora=(val1,val2)=>{
+    /*  const calucladora=(val1,val2)=>{
     let opcion=prompt("ingre la opereción a relizar")
       
     switch (opcion) {
@@ -412,41 +430,55 @@
 
 
         default:
-            alert("no tengo esa operación")
+            alert("no tengo esa operación");
             break;
       }
 
     }
 
-    calucladora(34,56);
+    calucladora(34,56); */
 
     //bucles
     
     //For
 
-    array=[1,2,3,4,5,6]
+    /* array=[1,2,3,4,5,6];
 
-    for (let i = 0; i <= array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         const element = array[i];
 
-        alert(element)
+        alert(element);
 
 
         
-    } */
+    }  */
 
     function contarNumeros(numLimite) {
         let resultado=0;
-        for (let index = 0; index < numLimite; index++) {
-            index;
-            alert(index)
+        for (let index = 1; index <= numLimite; index++) {
+            
+            alert(index) 
             
         }
         
         
     }
 
- contarNumeros(23);
+    //While
+
+    let suma = 0;
+    while (true) {
+        let entrada = prompt("ingrese un numero o escribe  salir para terminar")
+        if (entrada.toLocaleLowerCase() === "salir") {
+            break;
+        }
+        suma += parseInt(entrada);
+    }
+    console.log("la suma total es :", suma);
+
+
+
+ contarNumeros(10);
 
 
 
