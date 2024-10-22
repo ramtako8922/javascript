@@ -4,3 +4,22 @@
      width: 50%;
     margin: 0 auto;
 }
+
+.parrafo{
+    color: blueviolet;
+    font-size: 34px;
+}
+
+.parrafo2{
+    color: blue;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.boton{
+     background-color: blue;
+     color: white;
+     height: 40px;
+}
+
