@@ -18,7 +18,11 @@ let texto=document.getElementById("texto");
 let parrafo2=document.getElementById("parrafo2")
 let titulo2=document.getElementById("content-titulo")
 let items=document.querySelectorAll(".item")
-console.log(items);
+let  img = document.getElementById("miImagen");
+let contentInput=document.getElementById("content-input")
+const seleccion=document.getElementById("opcionseleccionada")
+const selecContent=document.querySelector(".select")
+const selecText=document.querySelector(".selectext")
 
 
 
@@ -74,40 +78,88 @@ document.getElementById("boton6").addEventListener("click", function() {
 })
 
 const ponerClase=()=>{
-    boton7.addEventListener('click',()=>{
+   
         parrafo2.classList.add("parrafo");
-    })
+  
 
 }
 
 const cambiarClase=()=>{
-    boton8.addEventListener('click',()=>{
+   
         titulo2.classList.toggle("parrafo2")
-    })
+  
 
 }
 
 const agregarTitulo=()=>{
-    boton9.addEventListener('click',()=>{
-        titulo2.innerHTML="<h2> Este es un titulo agregado </h2>"
-    })
+
+        titulo2.innerHTML="<h2> Este es un titulo agregado </h2>";
 
 }
 
 const clickBoton=()=>{
-    boton10.addEventListener('click',()=>{
+    
         boton10.textContent="boton clickeado"
-        boton10.classList.add("boton")
-    })
+        boton10.classList.add("boton");
+  
 
 }
 
 
  
 items.forEach(item=>{
-            item.style.backgroundColor="green"
+            item.style.backgroundColor="green";
+
 
         })
+
+        function cambiarImagen() {
+           
+            img.src = "/img/manos.jpg"; // Nueva imagen
+            img.alt = "Imagen cambiada"; // Cambia el texto alternativo (opcional)
+            img.width = 300; // Cambia el tamaño de la imagen si es necesario
+            img.height = 300;
+          }       
+           
+          
+          document.getElementById("input2").addEventListener("keyup", function() {
+            // Capturar el valor del input
+            const valor = document.getElementById("input2").value;
+            
+            // Mostrar el valor en la consola
+            console.log(valor);
+        
+            contentInput.innerHTML=" esto me llega desde el input pero a través del teclado "+ valor;
+        
+        })
+
+        function mostrarOpcion() {
+
+        const opSeleccion=document.getElementById("opcionseleccionada").value
+        selecContent.innerHTML="Este es el valor de la la selección " +opSeleccion
+            
+        }
+
+        function mostrarTextoOpcion() {
+        const selectElement = document.getElementById("opcionseleccionada");
+        const selectedIndex = selectElement.selectedIndex; // Obtiene el índice seleccionado
+        const selectedText = selectElement.options[selectedIndex].text; // Texto de la opción seleccionada
+        selecText.innerText = 
+          "Índice seleccionado: " + selectedIndex + " (Texto: " + selectedText + ")";
+      }
+
+      let valor = 0;
+
+      function incrementar() {
+        valor++;
+        document.getElementById("contador").innerText = valor;
+      }
+
+      function decrementar() {
+        valor--;
+        document.getElementById("contador").innerText = valor;
+      }
+                
             
 
 

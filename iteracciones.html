@@ -33,12 +33,35 @@
    <li class="item">Toyota</li>
 </ul>
 
+<img id="miImagen" src="https://via.placeholder.com/150" alt="Imagen inicial" width="150" height="150">
+<div>
+<label for="texto">texto por teclado</label>
+<input type="text" id="input2">
+<p id="content-input"></p>
+</div>
+ <label for="viajes"> selecciona tu lugar de destino</label>
+<select name="pais" id="opcionseleccionada">
+   <option value="1">Japón</option>
+   <option value="2">Brasil</option>
+   <option value="3">Argentina</option>
+</select>
+<p class="select"></p>
+<p class="selectext"></p>
+<p id="contador">0</p>
+
  <div id="content-titulo" class="contenedor-titulo"></div>
  <button id="boton7" onclick="ponerClase()"> Poner clase</button>
  <button id="boton8" onclick="cambiarClase()"> Cambiar clase</button>
  <button id="boton9" onclick="agregarTitulo()"> Agregar Titulo</button>
  <button id="boton10" onclick="clickBoton()"> Cambiar texto y estilo</button>
 <button id="boton11" onclick="resaltarLista()"> resaltar lista</button>
+<button onclick="cambiarImagen()">Cambiar Imagen</button>
+<button onclick="mostrarOpcion()">mostrar seleccion</button>
+<button onclick="mostrarTextoOpcion()">mostrar texto de la seleccion</button>
+<button onclick="incrementar()">Incrementar</button>
+<button onclick="decrementar()">Decrementar</button>
+
+
 </body>
 <script src="/js/interacciones.js"></script>
 </html>
