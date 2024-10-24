@@ -1,0 +1,14 @@
+table{
+    text-align: center;
+    box-shadow:  3px 3px 3px #0000;
+    border:#0000 1px, solid; 
+}
+
+table tr th{
+    border:#0000 1px, solid; 
+
+}
+
+table tr td{
+    border:#0000 1px, solid; 
+}
