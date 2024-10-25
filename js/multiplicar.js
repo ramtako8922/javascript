@@ -1,11 +1,14 @@
-const resultado=document.getElementById("resultado");
+const resultado=document.querySelector(".resultado")
 
-const numero=parseInt(prompt("ingrese el numero del que quiere conocer la tabla"))
+const numero=Number(prompt("ingrese el numero del que quiere conocer la tabla"))
+let muestraResultado="";
+for (var index = 1; index <= 10; index++) {
 
-for (let index = 1; index < 10; index++) {
+    let operacion=numero*index;
 
-    let operacion=numero+index;
+    console.log(operacion);
      
-     resultado.innerHtml=numero+ " "+"x"+" "+index+" "+" ="
     
+     muestraResultado+=numero+ " "+ "x"+" "+index+ "= "+operacion+"\n";
 }
+resultado.innerText=muestraResultado;
