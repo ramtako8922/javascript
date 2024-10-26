@@ -11,25 +11,26 @@
   <div class="calculadora">
     <input type="text" disabled id="pantalla">
     <div class="botones">
-        <button class="clear">c</button>
-        <button><-</button>
-        <button class="operador">%</button>
-        <button class="operador">/</button>
+        <button class="clear" onclick="limpiar()">c</button>
+        <button onclick="borrar()"><-</button>
+        <button class="operador" onclick="operar('%')">%</button>
+        <button class="operador" onclick="operar('/')">/</button>
+        <button class="operador" onclick="operar('**')">^</button>
         <button onclick="escribir('7')">7</button>
         <button onclick="escribir('8')" >8</button>
         <button onclick="escribir('9')">9</button>
-        <button class="operador">*</button>
+        <button class="operador" onclick="operar('*')">*</button>
         <button onclick="escribir('4')">4</button>
         <button onclick="escribir('5')">5</button>
         <button onclick="escribir('6')">6</button>
-        <button class="operador">-</button>
+        <button class="operador" onclick="operar('-')">-</button>
         <button onclick="escribir('1')">1</button>
         <button onclick="escribir('2')">2</button>
         <button onclick="escribir('3')">3</button>
-        <button class="operador">+</button>
+        <button class="operador"onclick="operar('+')">+</button>
         <button onclick="escribir('0')">0</button>
-        <button onclick="escribir(',')">,</button>
-        <button>=</button>
+        <button onclick="escribir(',')">.</button>
+        <button onclick="calcular()">=</button>
     </div>
   </div>  
 </body>
