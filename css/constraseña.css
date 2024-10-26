@@ -12,9 +12,18 @@ body{
 .formulario{
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+   align-items: center;
+   width: 100%;
 
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+}
+
 
 label{
     color: rgb(15, 206, 47);
@@ -22,10 +31,11 @@ label{
 
 input{
     width: 45%;
-    height: 30px;
+    height: 50px;
     background-color: rgb(235, 235, 225);
     border-radius: 8px;
     margin-top: 1%;
+    border: none;
     
 }
 
@@ -33,16 +43,32 @@ input{
     display: flex;
     justify-content: center;
     margin-top: 1%;
+    width: 30%;
 
 }
 
 
 button{
      background-color: rgb(12, 219, 39);
-     width: 15%;
+     width: 100%;
      color: aliceblue;
      border: none;
      border-radius: 8px;
      height: 25px;
      box-shadow: 1px 2px 2px 3px rgb(25, 25, 25);
+     cursor: pointer;
+}
+
+.validacion{
+    color: rgb(17, 175, 62);
+    font-size: 0.5em;
+}
+
+.validacionno{
+    color: rgb(219, 5, 5);
+    font-size: 0.5em;
+}
+
+span{
+    margin-top: 1%;
 }
